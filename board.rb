@@ -17,7 +17,7 @@ class Board
     self.new(tiles)
   end
 
-  def initialize(grid = self.empty_grid)
+  def initialize(grid = Board.empty_grid)
     @grid = grid
   end
 
@@ -28,8 +28,9 @@ class Board
 
   def []=(pos, value)
     x, y = pos
-    tile = grid[x][y]
-    tile.value = value
+    # tile = grid[x][y]
+    # tile.value = value
+    grid[x][y].value = value
   end
 
   def columns
